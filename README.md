@@ -16,7 +16,7 @@ You will need to modify the `webapp-dispatcher/pom.xml` (or any web application 
     <dependency>
       <groupId>com.atex.plugins</groupId>
       <artifactId>metrics-web</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <version>1.0</version>
     </dependency>
 ```
 
@@ -63,7 +63,7 @@ If you add a dependency from:
     <dependency>
       <groupId>com.atex.plugins</groupId>
       <artifactId>metrics-core</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <version>1.0</version>
     </dependency>
 ``` 
  
@@ -198,7 +198,7 @@ To use the `MetricsUtil` and so on, you need to add a dependency on `metrics-cor
     <dependency>
       <groupId>com.atex.plugins</groupId>
       <artifactId>metrics-core</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <version>1.0</version>
     </dependency>
 ``` 
 
