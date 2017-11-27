@@ -183,7 +183,7 @@ or
 
 > The template name if found will be prepended to the metric name.
 
-## Metric Util
+## Metrics
 
 There is `com.atex.plugins.metrics.MetricsUtil` which you can use to automatically track some complex code you may
 want to provide, to use it you need to provide a `MetricsRegistryProvider` which will be used to access the metrics
