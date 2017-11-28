@@ -13,10 +13,25 @@ mvn clean install deploy -Pdeploy
 
 ### Prepare for a release
 
+First you need to generate the release notes, use the last tag generated:
+
+```
+./getReleaseNotes.sh  metrics-xxxx | pbcopy
+```
+
+Edit the file `releaseNotes.md` by adding the new release on top and pasting the output of the script above,
+then push to git.
+
+```
+git commit -a -m "update release notes"
+git push
+```
+
 ```
 mvn clean install deploy release:prepare -Pdeploy -DautoVersionSubmodules=true
 mvn clean install deploy release:perform -Pdeploy
 git commit -a -m "prepare for next development"
+git push
 ```
 
 ### Cleanup a broken release
