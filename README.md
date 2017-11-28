@@ -7,6 +7,11 @@ You can access an admin menu using `/metrics-admin` and the health checks using 
 Every time you access to the health check endpoints, the health checks will be executed, keep in mind this when
 writing a new health check.
 
+## Polopoly Version
+10.16.3-fp3
+
+you can use version `1.0-RELEASE-10.12.0` which is fully compatible with polopoly 10.12 (you'll need to update the
+jetty polopoly plugin to version `7.6.16-polopoly-1.0`).
 
 ## Servlet Configuration
 
@@ -201,9 +206,6 @@ To use the `MetricsUtil` and so on, you need to add a dependency on `metrics-cor
       <version>1.0</version>
     </dependency>
 ``` 
-
-## Polopoly Version
-10.16.3-fp3
 
 ## Code Status
 The code in this repository is provided with the following status: **PROJECT**

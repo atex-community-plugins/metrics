@@ -16,6 +16,7 @@ mvn clean install deploy -Pdeploy
 ```
 mvn clean install deploy release:prepare -Pdeploy -DautoVersionSubmodules=true
 mvn clean install deploy release:perform -Pdeploy
+git commit -a -m "prepare for next development"
 ```
 
 ### Cleanup a broken release
