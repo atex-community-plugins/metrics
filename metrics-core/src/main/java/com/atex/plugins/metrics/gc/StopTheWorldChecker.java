@@ -70,7 +70,7 @@ public class StopTheWorldChecker extends Thread {
                 max = elapsed;
             }
             if (elapsed > (pause + 10L)) {
-                LOGGER.info("gc took " + elapsed + "ms");
+                LOGGER.fine("gc took " + elapsed + "ms");
                 if (lastLongPause > 0) {
                     if ((startTime - lastLongPause) <= minLevel) {
                         if (!oomSignal) {
