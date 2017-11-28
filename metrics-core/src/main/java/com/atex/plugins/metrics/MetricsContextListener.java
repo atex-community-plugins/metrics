@@ -171,23 +171,29 @@ public class MetricsContextListener implements ServletContextListener {
                     }
                     if (!params.getBoolean(name + ".disable", false)) {
                         HealthCheck check = null;
-                        if (injector != null) {
-                            try {
-                                check = (HealthCheck) injector.getInstance(k);
-                            } catch (Exception e) {
-                                LOGGER.log(Level.WARNING, "cannot create class " + k.getName() + " using guice: " + e.getMessage());
-                            }
-                        }
-                        if (check == null) {
-                            check = (HealthCheck) k.newInstance();
+                        try {
                             if (injector != null) {
-                                injector.injectMembers(check);
+                                try {
+                                    check = (HealthCheck) injector.getInstance(k);
+                                } catch (Throwable e) {
+                                    LOGGER.log(Level.WARNING, "cannot create class " + k.getName() + " using guice: " + e.getMessage());
+                                }
                             }
+                            if (check == null) {
+                                check = (HealthCheck) k.newInstance();
+                                if (injector != null) {
+                                    injector.injectMembers(check);
+                                }
+                            }
+                        } catch (Throwable e) {
+                            LOGGER.log(Level.WARNING, "cannot create class " + k.getName() + " using guice: " + e.getMessage());
                         }
-                        if (check instanceof AbstractHealthCheck) {
-                            ((AbstractHealthCheck) check).init(servletContext);
+                        if (check != null) {
+                            if (check instanceof AbstractHealthCheck) {
+                                ((AbstractHealthCheck) check).init(servletContext);
+                            }
+                            registry.register(name, check);
                         }
-                        registry.register(name, check);
                     }
                 }
             } catch (Exception e) {
