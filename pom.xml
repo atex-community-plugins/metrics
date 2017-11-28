@@ -26,14 +26,14 @@
 
   <groupId>com.atex.plugins</groupId>
   <artifactId>metrics</artifactId>
-  <version>1.0-RELEASE-10.12.0-SNAPSHOT</version>
+  <version>1.0-RELEASE-10.12.0</version>
   <packaging>pom</packaging>
 
   <scm>
     <connection>scm:git:git@github.com:atex-community-plugins/metrics.git</connection>
     <developerConnection>scm:git:git@github.com:atex-community-plugins/metrics.git</developerConnection>
     <url>https://github.com/atex-community-plugins/metrics</url>
-    <tag>RELEASE-10.12.0</tag>
+    <tag>metrics-1.0-RELEASE-10.12.0</tag>
   </scm>
 
   <properties>
