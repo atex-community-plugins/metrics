@@ -5,7 +5,7 @@ import java.util.logging.Logger;
 
 import javax.servlet.ServletContext;
 
-import com.atex.onecms.content.RepositoryClient;
+import com.atex.onecms.content.repository.CouchbaseClientComponent;
 import com.atex.plugins.metrics.AbstractHealthCheck;
 import com.atex.plugins.metrics.HealthCheckProvider;
 import com.polopoly.application.Application;
@@ -22,13 +22,13 @@ public class CouchbaseHealthCheck extends AbstractHealthCheck {
 
     private static final Logger LOGGER = Logger.getLogger(CouchbaseHealthCheck.class.getName());
 
-    private RepositoryClient repositoryClient;
+    private CouchbaseClientComponent component;
 
     @Override
     protected void init(final ServletContext servletContext) {
         try {
             final Application application = ApplicationServletUtil.getApplication(servletContext);
-            repositoryClient = application.getPreferredApplicationComponent(RepositoryClient.class);
+            component = application.getPreferredApplicationComponent(CouchbaseClientComponent.class);
         } catch (IllegalApplicationStateException e) {
             LOGGER.log(Level.SEVERE, e.getMessage(), e);
         }
@@ -36,8 +36,8 @@ public class CouchbaseHealthCheck extends AbstractHealthCheck {
 
     @Override
     protected Result check() throws Exception {
-        if (repositoryClient != null) {
-            if (!isServiceReady(repositoryClient)) {
+        if (component != null) {
+            if (!isServiceReady(component)) {
                 return Result.unhealthy("Couchbase is not ready");
             }
         }
