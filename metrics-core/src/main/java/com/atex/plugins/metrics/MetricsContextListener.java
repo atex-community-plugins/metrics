@@ -26,6 +26,7 @@ import com.codahale.metrics.servlets.MetricsServlet;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.google.inject.Injector;
+import com.polopoly.application.servlet.ApplicationNameNotFoundException;
 
 
 /**
@@ -189,10 +190,14 @@ public class MetricsContextListener implements ServletContextListener {
                             LOGGER.log(Level.WARNING, "cannot create class " + k.getName() + " using guice: " + e.getMessage());
                         }
                         if (check != null) {
-                            if (check instanceof AbstractHealthCheck) {
-                                ((AbstractHealthCheck) check).init(servletContext);
+                            try {
+                                if (check instanceof AbstractHealthCheck) {
+                                    ((AbstractHealthCheck) check).init(servletContext);
+                                }
+                                registry.register(name, check);
+                            } catch (ApplicationNameNotFoundException e) {
+                                LOGGER.log(Level.SEVERE, "cannot initialize " + k.getName() + ": " + e.getMessage());
                             }
-                            registry.register(name, check);
                         }
                     }
                 }
