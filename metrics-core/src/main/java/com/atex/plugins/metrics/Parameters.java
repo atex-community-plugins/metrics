@@ -3,10 +3,12 @@ package com.atex.plugins.metrics;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.util.Objects;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.servlet.ServletContext;
 
+import com.polopoly.application.servlet.ApplicationNameNotFoundException;
 import com.polopoly.application.servlet.ApplicationServletUtil;
 
 /**
@@ -55,8 +57,12 @@ public class Parameters {
 
         Object value = System.getProperty("com.atex.plugins.metrics." + name);
         if (value == null) {
-            final String appName = ApplicationServletUtil.getApplicationName(servletContext);
-            value = servletContext.getInitParameter("com.atex.plugins.metrics." + appName + "." + name);
+            try {
+                final String appName = ApplicationServletUtil.getApplicationName(servletContext);
+                value = servletContext.getInitParameter("com.atex.plugins.metrics." + appName + "." + name);
+            } catch (ApplicationNameNotFoundException e) {
+                LOGGER.log(Level.FINE, "cannot get application name from context [" + servletContext.getContextPath() + "]: " + e.getMessage());
+            }
             if (value == null) {
                 value = servletContext.getInitParameter("com.atex.plugins.metrics." + name);
                 if (value != null) {
