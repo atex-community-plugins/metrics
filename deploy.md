@@ -20,7 +20,7 @@ First you need to generate the release notes, use the last tag generated:
 ```
 
 Edit the file `releaseNotes.md` by adding the new release on top and pasting the output of the script above,
-then push to git.
+update `README.md` with the version that will be released (i.e. in the dependency examples) and then push to git.
 
 ```
 git commit -a -m "update release notes"

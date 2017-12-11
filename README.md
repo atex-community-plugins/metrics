@@ -10,7 +10,7 @@ writing a new health check.
 ## Polopoly Version
 10.16.3-fp3
 
-you can use version `1.0-RELEASE-10.12.0` which is fully compatible with polopoly 10.12 (you'll need to update the
+you can use version `1.1-RELEASE-10.12.0` which is fully compatible with polopoly 10.12 (you'll need to update the
 jetty polopoly plugin to version `7.6.16-polopoly-1.0`).
 
 ## Servlet Configuration
@@ -21,7 +21,7 @@ You will need to modify the `webapp-dispatcher/pom.xml` (or any web application 
     <dependency>
       <groupId>com.atex.plugins</groupId>
       <artifactId>metrics-web</artifactId>
-      <version>1.0</version>
+      <version>1.2</version>
     </dependency>
 ```
 
@@ -68,7 +68,7 @@ If you add a dependency from:
     <dependency>
       <groupId>com.atex.plugins</groupId>
       <artifactId>metrics-core</artifactId>
-      <version>1.0</version>
+      <version>1.2</version>
     </dependency>
 ``` 
  
@@ -203,7 +203,7 @@ To use the `MetricsUtil` and so on, you need to add a dependency on `metrics-cor
     <dependency>
       <groupId>com.atex.plugins</groupId>
       <artifactId>metrics-core</artifactId>
-      <version>1.0</version>
+      <version>1.w</version>
     </dependency>
 ``` 
 
