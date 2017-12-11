@@ -13,7 +13,7 @@
   <parent>
     <groupId>com.atex.plugins</groupId>
     <artifactId>metrics</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
