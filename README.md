@@ -203,7 +203,7 @@ To use the `MetricsUtil` and so on, you need to add a dependency on `metrics-cor
     <dependency>
       <groupId>com.atex.plugins</groupId>
       <artifactId>metrics-core</artifactId>
-      <version>1.w</version>
+      <version>1.2</version>
     </dependency>
 ``` 
 
