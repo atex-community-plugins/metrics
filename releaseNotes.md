@@ -1,6 +1,13 @@
 RELEASE NOTES
 =============
 
+## metrics-1.3
+
+- [view commit](https://github.com/atex-community-plugins/metrics/commit/02356873fa01fed97fd9990a68ec6f264b33d009) Upgrade dropwizard metrics to version 4.0.2.
+- [view commit](https://github.com/atex-community-plugins/metrics/commit/8beda7760abbd50a6823a196221ec0dcea4d9f62) Fixed README.md
+- [view commit](https://github.com/atex-community-plugins/metrics/commit/a0f2d41f14f4710512b01cecc7dbad737f84e5a6) Fixed README.me with the latest release version and updated the deploy procedure.
+- [view commit](https://github.com/atex-community-plugins/metrics/commit/640bfef0c0758a6ab80aca0a0375b7ad8ec37215) [maven-release-plugin] prepare for next development iteration
+
 ## metrics-1.2
 
 - [view commit](https://github.com/atex-community-plugins/metrics/commit/16644f68b57276aded068775802f3ed45f89e03f) When the metrics plugin is used in a web application without a polopoly application configured, it should not complain and start it anyway.
