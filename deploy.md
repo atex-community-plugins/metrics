@@ -3,7 +3,7 @@ Metrics and Health Checks plugin
 
 This is the deploy guide.
 
-You need to use java 1.7
+You need to use java 1.8
 
 ### (Re)Deploy an existing release
 
