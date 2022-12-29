@@ -135,7 +135,7 @@ public class MetricsContextListener implements ServletContextListener {
 
     private void discoverHealthChecks(final ServletContext servletContext,
                                       final HealthCheckRegistry registry) {
-        final List<String> packages = Lists.newArrayList();
+        final List<String> packages = new ArrayList<>();
         final Enumeration<String> parameterNames = servletContext.getInitParameterNames();
         while (parameterNames.hasMoreElements()) {
             final String name = parameterNames.nextElement();
