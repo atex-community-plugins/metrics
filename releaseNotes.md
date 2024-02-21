@@ -1,6 +1,17 @@
 RELEASE NOTES
 =============
 
+## metrics-1.4
+
+- [view commit](https://github.com/atex-community-plugins/metrics/commit/84243d63c61cd35b69411eb18b2404126ac282b0) try to fix the release process
+- [view commit](https://github.com/atex-community-plugins/metrics/commit/cdba2e0a54c59deff213a7eae9fbe17a18f8e5e7) renamed all the jars with the "atex-" prefix otherwise they may clash with the dropwizard metrics libraries.
+- [view commit](https://github.com/atex-community-plugins/metrics/commit/25e92f044839747a78d162228877764370278660) Fix deploy issue
+- [view commit](https://github.com/atex-community-plugins/metrics/commit/762e1dbe54642de9f1eb92a50fb3a6855e871e9b) Fix build issue
+- [view commit](https://github.com/atex-community-plugins/metrics/commit/3932e86d6c6e84e1632a58af335c3555b67a8634) Reduce guava usage.
+- [view commit](https://github.com/atex-community-plugins/metrics/commit/65e4f26399bcb747697bab0410668424331b9992) using java 1.8
+- [view commit](https://github.com/atex-community-plugins/metrics/commit/53f547a0cfa88efe92c7b5c4938005703c14841a) using java 1.8
+- [view commit](https://github.com/atex-community-plugins/metrics/commit/63002a57c61a103acdff17ae41f9e497b5e07ec8) [maven-release-plugin] prepare for next development iteration
+
 ## metrics-1.3
 
 - [view commit](https://github.com/atex-community-plugins/metrics/commit/02356873fa01fed97fd9990a68ec6f264b33d009) Upgrade dropwizard metrics to version 4.0.2.
