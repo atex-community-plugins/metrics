@@ -1,5 +1,6 @@
 package com.atex.plugins.metrics;
 
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.Set;
@@ -24,7 +25,6 @@ import com.codahale.metrics.jmx.JmxReporter;
 import com.codahale.metrics.servlets.HealthCheckServlet;
 import com.codahale.metrics.servlets.MetricsServlet;
 import com.google.common.base.Splitter;
-import com.google.common.collect.Lists;
 import com.google.inject.Injector;
 import com.polopoly.application.servlet.ApplicationNameNotFoundException;
 
