@@ -71,6 +71,7 @@
 
 
   <build>
+    <finalName>atex-metrics</finalName>
 
     <pluginManagement>
       <plugins>

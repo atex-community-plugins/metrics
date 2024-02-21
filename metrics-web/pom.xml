@@ -85,6 +85,8 @@
   </reporting>
 
   <build>
+    <finalName>atex-metrics-web</finalName>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

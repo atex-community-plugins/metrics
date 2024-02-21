@@ -200,6 +200,8 @@
   </reporting>
 
   <build>
+    <finalName>atex-metrics-core</finalName>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
