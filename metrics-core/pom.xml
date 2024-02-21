@@ -120,6 +120,7 @@
         </reportSets>
       </plugin>
 
+      <!--
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
@@ -136,6 +137,7 @@
           <maxmemory>512m</maxmemory>
         </configuration>
       </plugin>
+      -->
 
       <!-- maven codehaus reports -->
 
